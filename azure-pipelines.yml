@@ -30,4 +30,10 @@ steps:
 #     pip install pytest pytest-azurepipelines
 #     pytest
 #   displayName: 'pytest'
-- task: PublishBuildArtifacts@1
+
+steps:
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifactType: 'pipeline'
+    artifactName: 'drop'
