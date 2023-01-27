@@ -31,7 +31,6 @@ steps:
 #     pytest
 #   displayName: 'pytest'
 
-steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
